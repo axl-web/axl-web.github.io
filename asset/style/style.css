@@ -1,0 +1,264 @@
+/* ***** ***** Colores y Fuentes ***** ***** */
+:root{
+    --primary:#202124;
+    --area:#292a2e;
+    --accents_red:#fe0000;
+    --milkGlass: #FAF8F0;
+    --nordicBreezer: #D3DDE6;
+    --hmtl:#FD6A02;
+    --hmtl2:#FFAE42;
+    --font_text:'Noto Sans JP', sans-serif;
+}
+
+@font-face{
+    font-family: 'atkinson';
+    src: url(.//Atkinson-Hyperlegible-Regular-102.ttf);
+}
+
+/* ***** ***** Estilo General ***** ***** */
+
+html, body{
+    margin: 0%;
+    padding: 0px;
+    color: var(--nordicBreezer);
+    background-color: var(--primary);
+    font-family:"atkinson";
+}
+
+.bigMarginTop{
+    margin-top: 150px;
+}
+
+.title{
+    font-family:var(--font_text);
+}
+
+.section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.neuromorph{
+    border-radius: 20px;
+    background: var(--area);
+    box-shadow: inset -5px -5px 14px #18181b, 
+                inset 5px 5px 14px #3a3c41;
+}
+
+.subTitle{
+    width: 400px;
+    margin: 20px auto;
+    font-size:2em;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: var(--accents_red);
+    color: var(--milkGlass);
+    font-family: var(--font_text);
+    text-shadow: 1px 2px 4px #000;
+    border-radius: 4px;
+    box-shadow: 0px 4px 5px rgba(0,0,0, 0.16), 0px 4px 10px rgba(0,0,0, 0.12);
+}
+
+/* ***** ***** Hero Image ***** ***** */
+.hero-image{
+    width: 100%;
+    height: 90vh;
+    background-image: url(../img/hero_image.jpg);
+    background-size: cover;
+    background-position: center;
+    padding:0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-blend-mode:multiply;
+    z-index: -20;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 5px rgba(0,0,0, 0.16), 0px 4px 10px rgba(0,0,0, 0.12);
+}
+
+/* ***** ***** Hero Nav ***** ***** */
+
+.hero-image .hero-nav{
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-end;
+}
+
+.hero-nav .nav-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-container .navItems{
+    margin-right: 90px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-container .navItems a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 5px;
+    padding: 0.4em;
+    cursor: pointer;
+    text-shadow: 1px 2px 4px #000;
+    color: var(--nordicBreezer) !important;
+    border-radius: 15px ;
+    position: relative;
+    z-index:10;
+}
+
+.nav-container .navItems a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    left: 0px;
+    bottom: 0px;
+    background-color:var(--accents_red);
+    z-index: -10;
+    transition: all 0.20s ease-out;
+}
+
+.nav-container .navItems a:hover::before{
+    height:100%;
+}
+
+.nav-container .navIcon{
+   position: relative;
+}
+
+.nav-container .navIcon img{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width:75px;
+    height:75px;
+}
+
+/* ***** ***** Hero Title ***** ***** */
+
+.hero-image .hero-title{
+    font-family: var(--font_text);
+    box-sizing: border-box;
+    padding-left: 20px;
+    color: var(--nordicBreezer); 
+    pointer-events: none;
+}
+
+.hero-image .hero-title h1{
+   
+    font-size: 55px;
+    padding: 0px;
+    margin-bottom:15px ;
+    text-shadow: 1px 3px 4px #000;
+    color: inherit;
+}
+
+.hero-image .hero-title p{
+    font-size: 24px;
+    text-shadow: 1px 3px 2px #000;
+    color: inherit;
+}
+/* ***** ***** About section ***** ***** */
+
+.mainImge{
+    width:370px ;
+    height: 370px;
+    padding:0px;
+    box-sizing: border-box;
+    position: relative;
+    background-image: url(../img/me.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index:50;
+    border-radius:20%;
+}
+
+.mainImge::after{
+    content: "";
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+    border: 4px outset var(--accents_red);
+    z-index: -2;
+    border-radius: 20%;
+    box-sizing: border-box;
+}
+
+.aboutText{
+    width: 80%;
+    padding: 20px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.aboutText h2{
+    align-self: flex-start;
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 4px 3px 5px rgba(0,0,0, 0.5);
+    padding-left: 10px;
+}
+
+.aboutText .aboutText-content{
+    font-size: 1em;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+}
+
+/* ***** ***** Skills section ***** ***** */
+
+.card{
+    width: 350px;
+    height: 350px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+
+/* ***** ***** ***** Large ***** ***** ***** */
+@media (min-width: 960px){
+    .section{
+        flex-direction: row;
+        padding: 50px;
+        box-sizing: border-box;
+    }
+
+    .mainImge{
+        margin: 0 auto;
+        margin-right: 70px;
+    }
+    .aboutText{
+        width: 60%;
+        margin-top: 0px;
+    }
+
+    .aboutText h2{ 
+        font-size: 2.5em;
+        margin: 10px;
+    }
+
+    .aboutText .aboutText-content{
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        padding: 10px 30px;
+    }
+}
